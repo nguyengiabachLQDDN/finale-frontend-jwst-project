@@ -20,3 +20,22 @@ body, html, #root {
 .openseadragon-container {
   overflow: visible !important;
 }
+/* Hình nền thiên hà cho màn hình chờ */
+.bg-cosmic {
+  background-image: 
+    /* Lớp kính râm (Gradient) giúp làm dịu ảnh nền, làm nổi bật chữ */
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.9)), 
+    /* Link ảnh thiên hà 4K tuyệt đẹp từ Unsplash */
+    url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2048&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation: pulse-glow 15s infinite alternate; /* (Tùy chọn) Thêm hiệu ứng thở nhẹ */
+}
+
+/* (Tùy chọn) Hiệu ứng làm màn hình nền sáng lên rồi tối đi nhè nhẹ */
+@keyframes pulse-glow {
+  0% { filter: brightness(0.9); }
+  100% { filter: brightness(1.2); }
+}
